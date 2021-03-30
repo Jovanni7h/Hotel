@@ -4,7 +4,7 @@ session_start();
 $conn = mysqli_connect(
   'localhost',
   'root',
-  'heyprograGio',
+  '',
   'Hotel'
 );
 // if(isset($conn)){
