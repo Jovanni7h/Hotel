@@ -14,12 +14,10 @@
   
    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <a class="navbar-brand" href="index.php">
-    <strong width="30" height="30" class="d-inline-block align-top text-info" alt="" loading="lazy"> 
-      HC
+    <strong class="d-inline-block align-top text-info" alt="" loading="lazy"> 
+    <img class="img-fluid" src="images/logo hotel.png" width="50" height="50" alt="" />
     </strong>
-    <small>
-      Hotel Cascada
-    </small>
+   
   </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>

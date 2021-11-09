@@ -17,13 +17,13 @@
       <div class="container">
         <div class="row align-items-center">
           <div class="col-12 col-md-4 text-center">
-            <h1 class="mt-3 mb-3">Hotel "Cascada"</h1>
-            <p>El mejor lugar para descansar y algo mas...</p>
+          <img class="img-fluid" src="images/logo hotel.png" alt="" />
+            <p>MÁS CERCA DEL PARAÍSO</p>
             <a class="btn btn-outline-info" href="home.php"> Empezar </a>
           </div>
 
           <div class="col-12 col-md-8 text-center">
-            <img class="img-fluid" src="images/cascada.png" style="height: 700px;" alt="" />
+          <video src="images/cascada.mp4" width="640" height="480" autoplay controls></video>
           </div>
         </div>
       </div>
