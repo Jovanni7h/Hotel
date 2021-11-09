@@ -17,7 +17,7 @@
       <div class="container">
         <div class="row align-items-center">
           <div class="col-12 col-md-4 text-center">
-          <img class="img-fluid" src="images/logo hotel.png" alt="" />
+          <img class="img-fluid" src="images/logo.png" alt="" />
             <p>MÁS CERCA DEL PARAÍSO</p>
             <a class="btn btn-outline-info" href="home.php"> Empezar </a>
           </div>
