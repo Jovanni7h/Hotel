@@ -12,6 +12,8 @@ include ('modalLogin.php');
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hotel Cascada</title>
+  <link rel="stylesheet" href="styles/footer.css">
+  
  
 </head>
 <body>
@@ -152,6 +154,14 @@ include ('modalLogin.php');
       </div>
     </div>
   </div>
+  <div class="container">
+    <div class="row">
+    <?php 
+  include ('includes/footer2.php');
+  ?>
+    </div>
+  </div>
+ 
   <!-- Modal -->
                 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                   <div class="modal-dialog">

@@ -73,7 +73,6 @@ include ('modalLogin.php');
             Por favor ingresa el Telefono
           </div>
           </div>
-
           <div class="col">
             <label for="fecha">Fecha de reservacion</label>
             <input type="date" min="2020-11-01" max="2021-12-01" step="1" class="form-control" name='fecha' id='fecha'required>
@@ -97,7 +96,6 @@ include ('modalLogin.php');
           </div>
           </div>
         </div>
-
         <div class="form-row mb-3">
           <div class="col-3">
             <label for="habitacion">Habitacion</label>
