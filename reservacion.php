@@ -73,6 +73,7 @@ include ('modalLogin.php');
             Por favor ingresa el Telefono
           </div>
           </div>
+
           <div class="col">
             <label for="fecha">Fecha de reservacion</label>
             <input type="date" min="2020-11-01" max="2021-12-01" step="1" class="form-control" name='fecha' id='fecha'required>
@@ -83,7 +84,9 @@ include ('modalLogin.php');
             Por favor ingresa la fecha
           </div>
           </div>
-           <div class="col">
+          
+
+          <div class="col">
             <label for="hora">Hora de reservacion</label>
             <input type="time" class="form-control" name='hora' id='hora' required>
           <div class="valid-tooltip">
@@ -94,6 +97,7 @@ include ('modalLogin.php');
           </div>
           </div>
         </div>
+
         <div class="form-row mb-3">
           <div class="col-3">
             <label for="habitacion">Habitacion</label>
@@ -118,12 +122,36 @@ include ('modalLogin.php');
             </select>
            <div class="valid-tooltip">
               Muy Bien!
+           </div>
+           <div class="invalid-feedback">
+            Por favor selecciona la habitacion
+           </div>
+          </div>
+
+          <div class="col-md-2">
+            <label for="fecha">Cantidad</label>
+            <input type="number" class="form-control" name='cantidad' id='cantidad'required>
+          <div class="valid-tooltip">
+              Muy Bien!
           </div>
           <div class="invalid-feedback">
-            Por favor selecciona la habitacion
+            Por favor ingresa la fecha
           </div>
           </div>
+           
+
           
+          <div class="col-md-4">
+            <label for="fecha">Fecha de salida</label>
+            <input type="date" min="2020-11-01" max="2021-12-01" step="1" class="form-control" name='fecha' id='fecha'required>
+          <div class="valid-tooltip">
+              Muy Bien!
+          </div>
+          <div class="invalid-feedback">
+            Por favor ingresa la fecha
+          </div>
+          </div>
+           
           </div>
           
           <!-- <input type="submit" class="btn btn-block btn-outline-success mt-4" name='save-info'></input> -->
