@@ -127,7 +127,7 @@ include ('modalLogin.php');
           </div>
 
           <div class="col-md-2">
-            <label for="fecha">Cantidad</label>
+            <label for="fecha">Cantidad de Habitaciones</label>
             <input type="number" class="form-control" name='cantidad' id='cantidad'required>
           <div class="valid-tooltip">
               Muy Bien!
