@@ -40,7 +40,7 @@ CREATE TABLE Confirmacion(
 
 
 
-INSERT INTO Usuarios (Usuario,Contraseña) VALUES("Admin","1234")
+INSERT INTO Usuarios (Usuario,Contraseña) VALUES("Admin","1234a")
 INSERT INTO Habitaciones (Nombre_Hab,Precio) VALUES("Sencilla", 250)
 INSERT INTO Habitaciones (Nombre_Hab,Precio) VALUES("Especial", 500)
 INSERT INTO Habitaciones (Nombre_Hab,Precio) VALUES("Suite", 1100)
