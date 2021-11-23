@@ -223,7 +223,7 @@ include ("database/db.php");
         </thead>
         <tbody>
           <?php
-              $query = "SELECT Confirmacion.Id_Reservacion, Reservaciones.Nombre, Reservaciones.Apellido, Reservaciones.Fecha_Rev, Reservaciones.Hora, Habitaciones.Nombre_Hab, Confirmacion.Imagen
+              $query = "SELECT Confirmacion.Id_Reservacion, Reservaciones.Nombre, Reservaciones.Apellido, Reservaciones.Fecha_Rev, Reservaciones.Hora, Habitaciones.Nombre_Hab, Reservaciones.Fecha_Termino, Confirmacion.Imagen
               FROM Confirmacion,Reservaciones,Habitaciones 
               WHERE Confirmacion.Id_Reservacion=Reservaciones.Id_Reservacion 
               AND Reservaciones.Id_Habitacion=Habitaciones.Id_Habitacion";
