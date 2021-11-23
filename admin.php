@@ -246,7 +246,7 @@ include ("database/db.php");
                 <h5 class="text-secondary">Comprobante de pago</h5>
               </div>
               <div class="modal-body" style="font-weight:bold">
-                <img class="img-fluid" style="max-width: 100%; height: auto;" src="data:image/*;base64, <?php echo base64_encode($row['Imagen']); ?>" alt="">
+                <img class="img-fluid" style="max-width: 100%; height: auto;" src="<td><?php echo $row['Imagen']?></td>" alt="">
               </div>
                       <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Ok</button>
