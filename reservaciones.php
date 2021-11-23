@@ -52,6 +52,7 @@ include ('includes/footer.php');
                 <th scope="col">Telefono</th>
                 <th scope="col">Fecha de reservacion</th>
                 <th scope="col">Hora</th>
+                <th scope="col">Fecha de salida</th>
                 <th scope="col">Tipo de habitacion</th>
               </tr>
             </thead>
@@ -66,6 +67,7 @@ include ('includes/footer.php');
                 <td><?php echo $row['Telefono']?></td>
                 <td><?php echo $row['Fecha_Rev']?></td>
                 <td><?php echo $row['Hora']?></td>
+                <td><?php echo $row['Fecha_Termino']?></td>
                 <td><?php echo $row['Id_Habitacion']?></td>
                 <td class='text-center'>
                   
