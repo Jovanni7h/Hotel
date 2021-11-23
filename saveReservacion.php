@@ -10,7 +10,7 @@ if(isset($_POST['save-info'])){
   $habitacion = $_POST['habitacion'];
   $salida = $_POST['salida'];
   
-  $query = "INSERT INTO Reservaciones(Nombre,Apellido,Telefono,Fecha_Rev,Hora,Id_Habitacion) VALUES ('$nombre', '$apellido', '$telefono', '$fecha', '$hora', '$habitacion')";
+  $query = "INSERT INTO Reservaciones(Nombre,Apellido,Telefono,Fecha_Rev,Hora,Id_Habitacion,Fecha_Termino) VALUES ('$nombre', '$apellido', '$telefono', '$fecha', '$hora', '$habitacion')";
   $result = mysqli_query($conn, $query);
   
   if(!$result){
