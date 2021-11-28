@@ -46,7 +46,15 @@ if ($row = mysqli_fetch_array($resultado2)) {
   $precio = $row['Precio'];
 }
 
+$query3 = "SELECT Reservaciones.Cantidad, Habitaciones.Precio
+FROM Reservaciones
+INNER JOIN Habitaciones ON Reservaciones.Id_Habitacion = Habitaciones.Id_Habitacion";
 
+$resultado3 = mysqli_query($conn,$query3);
+if ($row = mysqli_fetch_array($resultado3)) {
+  $cantidad = $row['Cantidad'];
+  $precio = $row['Precio'];
+}
 
   ?>
 
@@ -66,13 +74,13 @@ if ($row = mysqli_fetch_array($resultado2)) {
           ?>
         </span>
       </h4>
-       <!-- <h4 class="text-uppercase text-success">Total a pagar:
+       <h4 class="text-uppercase text-success">Total a pagar:
         <span class="badge badge-info">
           <?php
-          echo $precio;
+           echo $cantidad
           ?>
         </span>
-      </h4> -->
+      </h4>
     
     <div class="row mt-4">
       <div class="col">

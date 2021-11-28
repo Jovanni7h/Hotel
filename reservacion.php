@@ -127,21 +127,21 @@ include ('modalLogin.php');
           </div>
 
           <div class="col-md-2.5">
-            <label for="fecha">Cantidad de Habitaciones</label>
+            <label for="cantidad">Cantidad de Habitaciones</label>
             <input type="number" class="form-control" name='cantidad' id='cantidad'required>
           <div class="valid-tooltip">
               Muy Bien!
           </div>
           <div class="invalid-feedback">
-            Por favor ingresa la fecha
+            Por favor ingresa la cantidad
           </div>
           </div>
            
 
           
           <div class="col-md-4">
-            <label for="fecha">Fecha de salida</label>
-            <input type="date" min="2020-11-01" max="2021-12-01" step="1" class="form-control" name='fecha' id='fecha'required>
+            <label for="fecha_salida">Fecha de salida</label>
+            <input type="date" min="2020-11-01" max="2021-12-01" step="1" class="form-control" name='fecha_salida' id='fecha_salida'required>
           <div class="valid-tooltip">
               Muy Bien!
           </div>
