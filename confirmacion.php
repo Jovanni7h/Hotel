@@ -48,7 +48,8 @@ if ($row = mysqli_fetch_array($resultado2)) {
 
 $query3 = "SELECT Reservaciones.Cantidad, Habitaciones.Precio
 FROM Reservaciones
-INNER JOIN Habitaciones ON Reservaciones.Id_Habitacion = Habitaciones.Id_Habitacion";
+INNER JOIN Habitaciones ON Reservaciones.Id_Habitacion = Habitaciones.Id_Habitacion
+WHERE Reservaciones.Id_Reservacion = $id";
 
 $resultado3 = mysqli_query($conn,$query3);
 if ($row = mysqli_fetch_array($resultado3)) {
@@ -68,16 +69,16 @@ if ($row = mysqli_fetch_array($resultado3)) {
         </div>
     </div>
       <h4 class="text-uppercase text-secondary">Numero de reservacion:
-        <span class="badge badge-info">
+        <span class="badge badge-warning">
           <?php
           echo $id;
           ?>
         </span>
       </h4>
-       <h4 class="text-uppercase text-success">Total a pagar:
-        <span class="badge badge-info">
+       <h4 class="text-uppercase text-secondary">Total a pagar:
+        <span class="badge badge-warning">
           <?php
-           echo $cantidad
+           echo  $cantidad * $precio
           ?>
         </span>
       </h4>
@@ -90,83 +91,63 @@ if ($row = mysqli_fetch_array($resultado3)) {
           </div>
           <div class="card-body text-left">
 
+            <p class="alert alert-danger" role="alert">Ya sea que elija pagar por medio de deposito o trasnferencia, el monto a pagar dependera del tipo de habitacion que halla selecionado al hacer su reservacion.</p>
 
             <h5 class="card-title text-info">Deposito bancario:</h5>
             <p class="card-text font-weight-bold">Nombre Titular: <span class="font-weight-normal">Hotel Cascada</span></p>
             <p class="card-text font-weight-bold">Número de Cuenta: <span class="font-weight-normal">1234567890</span></p>
             <p class="card-text font-weight-bold">Clabe interbancaria: <span class="font-weight-normal">123456789009876543</span></p>
+            <p class="card-text font-weight-bold">Monto: $<?php echo  $cantidad * $precio?></p>
 
+            <hr></hr>
             
             <h5 class="card-title text-info">Transferencia bancaria:</h5>
             <p class="card-text font-weight-bold">Banco: <span class="font-weight-normal">Bank of America</span></p>
             <p class="card-text font-weight-bold">Número de Cuenta: <span class="font-weight-normal">1234567890</span></p>
             <p class="card-text font-weight-bold">Clabe interbancaria: <span class="font-weight-normal">123456789009876543</span></p>
-            <p class="card-text font-weight-bold">Monto:</p>
-             <p class="alert alert-danger" role="alert">Ya sea que elija pagar por medio de deposito o trasnferencia, el monto a pagar dependera del tipo de habitacion que halla selecionado al hacer su reservacion, la siguiente tabla muestra los precios. </p>
+            <p class="card-text font-weight-bold">Monto: $<?php echo  $cantidad * $precio?></p>
             
-            <!--Table-->
-            <table class="table">
-              <thead class="thead-dark">
-                <tr>
-                  <th scope="col">Nombre</th>
-                  <th scope="col">$ Precio</th>
-                </tr>
-              </thead>
-              <tbody>
-                <?php
-              $query = "SELECT * FROM Habitaciones";
-              $registros = mysqli_query($conn,$query);
-              while($row = mysqli_fetch_array($registros)){ ?>
-              <tr>
-                <td><?php echo $row['Nombre_Hab']?></td>
-                <td><?php echo "$" , $row['Precio']?></td>
-              </tr>
-              <?php } ?>
-            </tbody>
-          </table>    
-          <!--/Table-->
-        
+     
+            <h5 class="mt-2  text-info">Instrucciones:</h3>
+
+<div class="row mt-4">
+  <div class="col-2">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item active text-success" aria-current="page">Paso 1:</li>
+      </ol>
+    </nav>
+  </div>
+</div>
+<h5>
+  Toma una foto del ticket de pago o bien una captura del comprobante de pago.
+</h5>
+<div class="row mt-4">
+  <div class="col-2">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item active text-success" aria-current="page">Paso 2:</li>
+      </ol>
+    </nav>
+  </div>
+</div>
+<h5>
+  Vuelva a la pagina principal y de click en el boton <span class="text-info">Confirmar</span> o de click en el siguiente boton, despues llene el formulario
+</h5>
+<div class="row d-flex justify-content-center mt-4">
+  <div class="col-3 mb-4">
+    <a href="confiReservacion.php" class="btn btn-block btn-outline-info">Ir al formulario de confirmacion</a>
+  </div>
+</div>
+
         </div>
-       
-       
+  
         <div class="card-footer text-muted">
         </div>
       </div>
       </div>
     </div>  
       
-
-    <h3 class="mt-2 font-weight-bold">Instrucciones:</h3>
-
-    <div class="row mt-4">
-      <div class="col-2">
-        <nav aria-label="breadcrumb">
-          <ol class="breadcrumb">
-            <li class="breadcrumb-item active text-success" aria-current="page">Paso 1:</li>
-          </ol>
-        </nav>
-      </div>
-    </div>
-    <h5>
-      Toma una foto del ticket de pago o bien una captura del comprobante de pago.
-    </h5>
-    <div class="row mt-4">
-      <div class="col-2">
-        <nav aria-label="breadcrumb">
-          <ol class="breadcrumb">
-            <li class="breadcrumb-item active text-success" aria-current="page">Paso 2:</li>
-          </ol>
-        </nav>
-      </div>
-    </div>
-    <h5>
-      Vuelva a la pagina principal y de click en el boton <span class="text-info">Confirmar</span> o de click en el siguiente boton, despues llene el formulario
-    </h5>
-    <div class="row d-flex justify-content-center mt-4">
-      <div class="col-3 mb-4">
-        <a href="confiReservacion.php" class="btn btn-block btn-outline-info">Ir al formulario de confirmacion</a>
-      </div>
-    </div>
   </div>
        <!-- Modal -->
                 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

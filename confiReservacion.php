@@ -127,7 +127,7 @@ include ('modalLogin.php');
             Para poder llenar este formaulario primero debe tener una reservacion ya hecha.
           </strong>
         </p>
-          Si ya cuenta con una haga click en el boton <span class="text-success">Continuar</span>. Sino haha click en el boton <span class="text-info">Reservar</span>
+          Si ya cuenta con una haga click en el botón <span class="text-success">Continuar</span>. Si no, haga click en el botón <span class="text-info">Reservar</span>
       </div>
       <div class="modal-footer d-flex justify-content-around">
         <a class="btn btn-outline-info" href="reservacion.php">Reservar</a>

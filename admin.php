@@ -56,6 +56,7 @@ include ("database/db.php");
             <th scope="col">Telefono</th>
             <th scope="col">Fecha de reservacion</th>
             <th scope="col">Hora</th>
+            <th scope="col">Fecha de salida</th>
             <th scope="col">Tipo de habitacion</th>
           </tr>
         </thead>
@@ -71,6 +72,7 @@ include ("database/db.php");
                 <td><?php echo $row['Telefono']?></td>
                 <td><?php echo $row['Fecha_Rev']?></td>
                 <td><?php echo $row['Hora']?></td>
+                <td><?php echo $row['Fecha_Termino']?></td>
                 <td class="text-center"><?php echo $row['Id_Habitacion']?></td>
                 <td class="text-center">
                   
@@ -211,8 +213,9 @@ include ("database/db.php");
             <th scope="col">Id Reservacion</th>
             <th scope="col">Nombre</th>
             <th scope="col">Apellido</th>
-            <th scope="col">Fecha</th>
+            <th scope="col">Fecha de ingreso</th>
             <th scope="col">Hora</th>
+            <th scope="col">Fecha de salida</th>
             <th scope="col">Habitacion</th>
             <th scope="col">Imagen</th>
             <!-- <th scope="col">Operaciones</th> -->
@@ -220,7 +223,7 @@ include ("database/db.php");
         </thead>
         <tbody>
           <?php
-              $query = "SELECT Confirmacion.Id_Reservacion, Reservaciones.Nombre, Reservaciones.Apellido, Reservaciones.Fecha_Rev, Reservaciones.Hora, Habitaciones.Nombre_Hab, Confirmacion.Imagen
+              $query = "SELECT Confirmacion.Id_Reservacion, Confirmacion.Nombre, Confirmacion.Apellido, Confirmacion.Fecha_Rev, Confirmacion.Hora, Habitaciones.Nombre_Hab, Confirmacion.Fecha_Termino, Confirmacion.Imagen
               FROM Confirmacion,Reservaciones,Habitaciones 
               WHERE Confirmacion.Id_Reservacion=Reservaciones.Id_Reservacion 
               AND Reservaciones.Id_Habitacion=Habitaciones.Id_Habitacion";
@@ -232,6 +235,7 @@ include ("database/db.php");
                 <td><?php echo $row['Apellido']?></td>
                 <td><?php echo $row['Fecha_Rev']?></td>
                 <td><?php echo $row['Hora']?></td>
+                <td><?php echo $row['Fecha_Termino']?></td>
                 <td><?php echo $row['Nombre_Hab']?></td>
                 <td><a class="btn btn-outline-success" data-toggle="modal" data-target="#modalImagen">Ver imagen</a></td>
          <!-- Modal -->
