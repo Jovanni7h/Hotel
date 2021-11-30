@@ -75,7 +75,7 @@ if ($row = mysqli_fetch_array($resultado3)) {
           ?>
         </span>
       </h4>
-       <h4 class="text-uppercase text-secondary">Total a pagar:
+       <h4 class="text-uppercase text-secondary">Total a pagar por noche:
         <span class="badge badge-warning">
           <?php
            echo  $cantidad * $precio
