@@ -140,7 +140,7 @@ include ('modalLogin.php');
 
           
           <div class="col-md-4">
-            <label for="fecha_salida">Nuemero de noches</label>
+            <label for="fecha_salida">Numero de noches</label>
             <input type="number" class="form-control" name='cantidad_noches' id='cantidad_noches'required>
           <div class="valid-tooltip">
               Muy Bien!
