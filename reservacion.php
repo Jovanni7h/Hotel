@@ -75,7 +75,7 @@ include ('modalLogin.php');
           </div>
           <div class="col">
             <label for="fecha">Fecha de reservacion</label>
-            <input type="date" min="2020-11-01" max="2022-12-31" step="1" class="form-control" name='fecha' id='fecha'required>
+            <input type="date" min="2021-09-06" max="2030-12-31" step="1" class="form-control" name='fecha' id='fecha'required>
           <div class="valid-tooltip">
               Muy Bien!
           </div>
@@ -141,7 +141,7 @@ include ('modalLogin.php');
           
           <div class="col-md-4">
             <label for="fecha_salida">Fecha de salida</label>
-            <input type="date" min="2020-11-01" max="2021-12-01" step="1" class="form-control" name='fecha_salida' id='fecha_salida'required>
+            <input type="date" min="2021-09-06" max="2030-12-31" step="1" class="form-control" name='fecha_salida' id='fecha_salida'required>
           <div class="valid-tooltip">
               Muy Bien!
           </div>
