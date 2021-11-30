@@ -97,7 +97,7 @@ if ($row = mysqli_fetch_array($resultado3)) {
             <p class="card-text font-weight-bold">Nombre Titular: <span class="font-weight-normal">Hotel Cascada</span></p>
             <p class="card-text font-weight-bold">Número de Cuenta: <span class="font-weight-normal">1234567890</span></p>
             <p class="card-text font-weight-bold">Clabe interbancaria: <span class="font-weight-normal">123456789009876543</span></p>
-            <p class="card-text font-weight-bold">Monto: $<?php echo  $cantidad * $precio?></p>
+            <p class="card-text font-weight-bold">Monto por noche: $<?php echo  $cantidad * $precio?></p>
 
             <hr></hr>
             
@@ -105,7 +105,7 @@ if ($row = mysqli_fetch_array($resultado3)) {
             <p class="card-text font-weight-bold">Banco: <span class="font-weight-normal">Bank of America</span></p>
             <p class="card-text font-weight-bold">Número de Cuenta: <span class="font-weight-normal">1234567890</span></p>
             <p class="card-text font-weight-bold">Clabe interbancaria: <span class="font-weight-normal">123456789009876543</span></p>
-            <p class="card-text font-weight-bold">Monto: $<?php echo  $cantidad * $precio?></p>
+            <p class="card-text font-weight-bold">Monto por noche: $<?php echo  $cantidad * $precio?></p>
             
      
             <h5 class="mt-2  text-info">Instrucciones:</h3>
