@@ -46,7 +46,7 @@ if ($row = mysqli_fetch_array($resultado2)) {
   $precio = $row['Precio'];
 }
 
-$query3 = "SELECT Reservaciones.Cantidad, Habitaciones.Precio
+$query3 = "SELECT Reservaciones.Cantidad, Habitaciones.Precio, Reservaciones.Cantidad_Noches
 FROM Reservaciones
 INNER JOIN Habitaciones ON Reservaciones.Id_Habitacion = Habitaciones.Id_Habitacion
 WHERE Reservaciones.Id_Reservacion = $id";
@@ -55,6 +55,7 @@ $resultado3 = mysqli_query($conn,$query3);
 if ($row = mysqli_fetch_array($resultado3)) {
   $cantidad = $row['Cantidad'];
   $precio = $row['Precio'];
+  $noches = $row['Cantidad_Noches'];
 }
 
   ?>
@@ -78,7 +79,7 @@ if ($row = mysqli_fetch_array($resultado3)) {
        <h4 class="text-uppercase text-secondary">Total a pagar:
         <span class="badge badge-warning">
           <?php
-           echo  $cantidad * $precio
+           echo  $cantidad * $precio * $noches
           ?>
         </span>
       </h4>

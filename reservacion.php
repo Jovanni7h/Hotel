@@ -140,13 +140,13 @@ include ('modalLogin.php');
 
           
           <div class="col-md-4">
-            <label for="fecha_salida">Fecha de salida</label>
-            <input type="date" min="2020-11-01" max="2021-12-01" step="1" class="form-control" name='fecha_salida' id='fecha_salida'required>
+            <label for="fecha_salida">Nuemero de noches</label>
+            <input type="number" class="form-control" name='cantidad_noches' id='cantidad_noches'required>
           <div class="valid-tooltip">
               Muy Bien!
           </div>
           <div class="invalid-feedback">
-            Por favor ingresa la fecha
+            Por favor ingresa la cantidad
           </div>
           </div>
            

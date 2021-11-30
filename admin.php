@@ -56,7 +56,8 @@ include ("database/db.php");
             <th scope="col">Telefono</th>
             <th scope="col">Fecha de reservacion</th>
             <th scope="col">Hora</th>
-            <th scope="col">Fecha de salida</th>
+            <th scope="col">Num.Habitaciones</th>
+            <th scope="col">Num.Noches</th>
             <th scope="col">Tipo de habitacion</th>
           </tr>
         </thead>
@@ -72,7 +73,8 @@ include ("database/db.php");
                 <td><?php echo $row['Telefono']?></td>
                 <td><?php echo $row['Fecha_Rev']?></td>
                 <td><?php echo $row['Hora']?></td>
-                <td><?php echo $row['Fecha_Termino']?></td>
+                <td><?php echo $row['Cantidad']?></td>
+                <td><?php echo $row['Cantidad_Noches']?></td>
                 <td class="text-center"><?php echo $row['Id_Habitacion']?></td>
                 <td class="text-center">
                   
@@ -216,7 +218,8 @@ include ("database/db.php");
             <th scope="col">Apellido</th>
             <th scope="col">Fecha de ingreso</th>
             <th scope="col">Hora</th>
-            <th scope="col">Fecha de salida</th>
+            <th scope="col">Num.Habitaciones</th>
+            <th scope="col">Num.Noches</th>
             <th scope="col">Habitacion</th>
             <th scope="col">Imagen</th>
             <!-- <th scope="col">Operaciones</th> -->
@@ -224,7 +227,7 @@ include ("database/db.php");
         </thead>
         <tbody>
           <?php
-              $query = "SELECT Confirmacion.Id_Reservacion, Reservaciones.Nombre, Reservaciones.Apellido, Reservaciones.Fecha_Rev, Reservaciones.Hora, Habitaciones.Nombre_Hab, Reservaciones.Fecha_Termino, Confirmacion.Imagen
+              $query = "SELECT Confirmacion.Id_Reservacion, Reservaciones.Nombre, Reservaciones.Apellido, Reservaciones.Fecha_Rev, Reservaciones.Hora,Reservaciones.Cantidad,Habitaciones.Nombre_Hab, Reservaciones.Cantidad_Noches, Confirmacion.Imagen
               FROM Confirmacion,Reservaciones,Habitaciones 
               WHERE Confirmacion.Id_Reservacion=Reservaciones.Id_Reservacion 
               AND Reservaciones.Id_Habitacion=Habitaciones.Id_Habitacion";
@@ -236,7 +239,8 @@ include ("database/db.php");
                 <td><?php echo $row['Apellido']?></td>
                 <td><?php echo $row['Fecha_Rev']?></td>
                 <td><?php echo $row['Hora']?></td>
-                <td><?php echo $row['Fecha_Termino']?></td>
+                <td><?php echo $row['Cantidad']?></td>
+                <td><?php echo $row['Cantidad_Noches']?></td>
                 <td><?php echo $row['Nombre_Hab']?></td>
                 <td><a class="btn btn-outline-success" href="verImagen.php?Id_Reservacion=<?php echo $row['Id_Reservacion']?>" >Ver imagen</a></td>
          <!-- Modal

@@ -9,9 +9,9 @@ if(isset($_POST['save-info'])){
   $hora = $_POST['hora'];
   $habitacion = $_POST['habitacion'];
   $cantidad = $_POST['cantidad'];
-  $fecha_salida = $_POST['fecha_salida'];
+  $cantidad_noches = $_POST['cantidad_noches'];
   
-  $query = "INSERT INTO Reservaciones(Nombre,Apellido,Telefono,Fecha_Rev,Hora,Id_Habitacion,Cantidad,Fecha_Termino) VALUES ('$nombre', '$apellido', '$telefono', '$fecha', '$hora', '$habitacion', '$cantidad', '$fecha_salida')";
+  $query = "INSERT INTO Reservaciones(Nombre,Apellido,Telefono,Fecha_Rev,Hora,Id_Habitacion,Cantidad,Cantidad_Noches) VALUES ('$nombre', '$apellido', '$telefono', '$fecha', '$hora', '$habitacion', '$cantidad', '$cantidad_noches')";
   $result = mysqli_query($conn, $query);
   
   if(!$result){
