@@ -174,27 +174,28 @@ include ("database/db.php");
                     <!-- <a class='btn btn-danger' data-toggle="modal" data-target="#exampleModal">
                       <i class="fas fa-trash-alt"></i>
                     </a> -->
-                             <!-- Modal -->
-                  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <div class="alert alert-danger" style="width:100%" role="alert">
-                            Advertencia
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <div class="alert alert-danger" style="width:100%" role="alert">
+                                  Advertencia
+                                </div>
+                              </div>
+                              <div class="modal-body" style="font-weight:bold">
+                                ¿Esta seguro de que desea eliminar esta habitacion?
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                                <a type="button" href="deleteHabitacion.php?Id_Habitacion=<?php echo $row['Id_Habitacion']?>"  class="btn btn-primary">Eliminar</a>
+                              </div>
+                            </div>
                           </div>
                         </div>
-                        <div class="modal-body" style="font-weight:bold">
-                          ¿Esta seguro de que desea eliminar esta habitacion?
-                        </div>
-                        <div class="modal-footer">
-                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                          <a type="button" href="deleteHabitacion.php?Id_Habitacion=<?php echo $row['Id_Habitacion']?>"  class="btn btn-primary">Eliminar</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                   <!--/Modal -->
-                </td>
+                          <!--/Modal -->
+                  </td>
                 </tr>
               <?php } ?>
               </tbody>
@@ -237,8 +238,10 @@ include ("database/db.php");
                 <td><?php echo $row['Hora']?></td>
                 <td><?php echo $row['Fecha_Termino']?></td>
                 <td><?php echo $row['Nombre_Hab']?></td>
-                <td><a class="btn btn-outline-success" data-toggle="modal" data-target="#modalImagen">Ver imagen</a></td>
-         <!-- Modal -->
+                <td><a class="btn btn-outline-success" href="verImagen.php?Id_Reservacion=<?php echo $row['Id_Reservacion']?>" >Ver imagen</a></td>
+         <!-- Modal
+        data-toggle="modal" data-target="#modalImagen"
+        -->
         <div class="modal fade" id="modalImagen" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog">
             <div class="modal-content">
